@@ -1,0 +1,31 @@
+/* Matthias Barnes
+  September 19*/
+
+header {
+  background-color:azure;
+}
+footer {
+  background-color: azure;
+}
+
+p,
+li,
+ul {
+  font-size: 20px;
+}
+
+p > a:link {
+  color: red;
+}
+
+p > a:visited {
+  color: gray;
+}
+
+p > a:hover {
+  color: orange;
+}
+
+p > a:active {
+  color: salmon;
+}
