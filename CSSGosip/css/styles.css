@@ -18,6 +18,8 @@ h3{
 #outerwrapper{
     width: 650px;
     background-color: #E7DBF6;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav{
