@@ -1,0 +1,58 @@
+/* Sarah Wilson, 
+   October 1
+*/
+
+#outerwrapper {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+.floatleft { 
+float: left;
+margin-right: 3%;
+
+}
+
+.floatright {
+float: right;
+margin-left: 3%;
+
+}
+
+h1 {
+	font-family: Tahoma, sans-serif;
+	font-size: 35px;
+}
+
+h2 {
+	font-family: Tahoma, sans-serif;
+	font-weight: normal;
+	font-style: italic;
+}
+
+main, footer { 
+clear: both;
+background-color: #C5A98B;
+padding: 10px;
+list-style-image: url(../images/tomato.png);
+
+}
+
+ul {
+	list-style-type: none;
+}
+
+body {
+	background-color: #B8D1EB;
+	color: #000000;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+	font-size: .75em;
+	text-align: center;
+	background-color: #796B48;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
