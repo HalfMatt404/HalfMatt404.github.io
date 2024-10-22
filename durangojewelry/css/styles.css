@@ -1,0 +1,73 @@
+/* Matthias Barnes
+	October 22 */
+@font-face {
+	font-family: Roboto;
+	src: url(../fonts/roboto/Roboto-Bold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Pacifico;
+	src: url(../fonts//Pacifico/Pacifico-Regular.ttf);
+}
+
+
+html {
+	background-image: url("../images/jewelry.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+main {
+	background-image: linear-gradient(#ffffff, #F0F9E6);
+	padding: 10px;
+	margin: 20px;
+	border-radius: 2em;
+	font-size: 1.25em;
+	font-family: Arial, 'Courier New', 'Times New Roman';
+}
+
+footer {
+	font-size: 1em;
+	padding-bottom: 10px;
+	max-width: 50%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+img[src="images/necklace.jpg"] {
+	float: left;
+	border-radius: 50%;
+
+}
+
+h1 {
+
+	font-family: "Pacifico", cursive;
+	font-size: 4em;
+}
+
+h2 {
+	font-family: "Roboto";
+	font-size: 2em;
+}
+
+nav ul {
+	font-size: 1.5em;
+	list-style-type: none;
+	clear: both;
+}
+
+
+#outerwrapper {
+
+	background: rgba(243, 205, 170, 0.4);
+	border-radius: 15%;
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.addrightmarigin {
+	margin-right: 10%;
+}
