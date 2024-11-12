@@ -1,0 +1,12 @@
+/* Practice CustomFonts Style Sheet */
+
+@font-face {
+    font-family: 'Bear Paw';
+    src: url('../fonts/BEARPAW_.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	font-family: 'Bear Paw', "Times New Roman", serif;
+}
