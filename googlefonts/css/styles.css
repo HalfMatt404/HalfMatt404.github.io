@@ -1,0 +1,13 @@
+/* Practice CustomFonts Style Sheet */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+
+.google {
+    font-family: "Rubik Wet Paint", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.websafe{
+    font-family: Arial, Courier, "Courier New";
+}
