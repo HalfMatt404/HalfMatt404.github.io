@@ -1,0 +1,115 @@
+@font-face {
+  font-family: arimo;
+  src: url(../fonts/arimo/Arimo-Regular.ttf);
+  font-style:normal;
+}
+@font-face {
+  font-family: arimo;
+  src: url(../fonts/arimo/Arimo-Bold.ttf);
+  font-weight:bold;
+}
+@font-face {
+  font-family: arimo;
+  src: url(../fonts/arimo/Arimo-Italic.ttf);
+  font-style:italic;
+}
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+* {
+  font-family: arimo, Helvetica, sans-serif;
+  font-weight: normal;
+}
+body {
+  background-color: #0d0d0e;
+  background-image: url("../images/Background.png");
+  display: unset;
+  margin: 0;
+  height: 100vh;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #101015;
+  background-image: linear-gradient(#101015, #19191f 20%, #101015 90%);
+  border-bottom: solid #cb8838 4px;
+}
+header div {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+header ul {
+  list-style-type: none;
+  margin: auto 20px;
+}
+ul a:link {
+  background: none;
+  transition: all 0.1s ease-in-out;
+}
+ul a:hover {
+  background-color: #fff1;
+}
+ul a:active {
+  background-color: #eef2;
+}
+header li {
+  float: left;
+  border-left: solid 2px #fff1;
+}
+header li a {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+a {
+  color: #bcc;
+  text-decoration: none;
+  padding: 12px;
+}
+header > a {
+  padding: 10px;
+  margin-left: 30px;
+  margin: auto;
+}
+img {
+  filter: drop-shadow(3px 3px 3px #000a);
+}
+main img {
+  margin: 12px auto;
+  width: 500px;
+  filter: none;
+  border-bottom: 3px #544 solid;
+  margin-bottom: 100px;
+}
+main {
+  background-color: #797070;
+  background-image: linear-gradient(to right, #5c5050, #797075 1% 99%, #5c5050);
+  margin: 0px auto;
+  padding: 10px;
+  display: flow-root;
+  border-radius: 0px 0px 12px 12px;
+}
+main div {
+  display: flex;
+}
+footer {
+  background-color: #222;
+  background-image: linear-gradient(#222, #222 50%, #1a1a1a);
+  display: flex;
+  justify-content: center;
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -5px 4px #111a;
+}
+@media screen and (min-width: 600px) {
+  main {
+    max-width: 70%;
+  }
+  footer a {
+    transform: scale(0.7);
+    padding: 0;
+  }
+}
