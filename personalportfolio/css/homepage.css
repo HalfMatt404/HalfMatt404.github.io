@@ -1,0 +1,10 @@
+main img {
+  border-bottom: 3px #544 solid;
+  
+  width: 100vh;
+  max-width: 95%;
+  
+  margin: 12px auto 50px;
+  
+  filter: drop-shadow(2px 2px 1px #100a);
+}

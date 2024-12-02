@@ -1,26 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
-h1 {
-  margin: 0 auto; 
-  font-family: 'Tilt Warp', Arial, sans-serif;
-  font-weight: bold;
-  color: #fff;
-  font-size: 40px;
-}
 
 form {
   color: #ddd;
   
   border-radius: 12px;
-  margin: 12px auto;
+  margin: 0 auto 12px;
   
   width: 100%;
   max-width: 700px;
   
 }
 legend {
-  color: #eeeeee;
-  font-size: 17px;
+  background-color: #222;
+  color: #cb8838;
+  border-radius: 6px;
+  font-size: 19px;
+  
+  padding: 2px 8px;
 
   font-family: "Tilt Warp", Arial, sans-serif;
   font-weight: bold;
@@ -33,6 +30,8 @@ input,textarea, select {
   
   margin: 2px 0px;
   border-radius: 5px;
+  
+  filter: drop-shadow(2px 2px 2px #1005);
   
   transition: all .2s ease;
 }
@@ -47,6 +46,10 @@ input:focus {
   border-color: #aaa;
 }
 
+label {
+  color: #cacaca;
+}
+
 textarea {
   width: 100%;
   max-width: 500px;
@@ -58,6 +61,8 @@ fieldset {
   background-color: #1125;
   border: solid #38303050;
   border-radius: 6px;
+  
+  margin-bottom: 10px;
 }
 
 input[type="submit"] {
@@ -78,4 +83,14 @@ input[type="submit"]:hover {
   width: 100px;
   height:50px;
   border: solid #9999;
+}
+
+input[type="radio"] {
+  margin-bottom: 0;
+}
+
+.radioButtonsContainer {
+  display: flex;
+  
+  justify-content:space-evenly;
 }

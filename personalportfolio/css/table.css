@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+.scrollableTable {
+  overflow-x:auto;
+  overflow-y:hidden;
+   
+}
+table {
+  background: #20201c20;
+  margin: 0 auto 50px;
+  padding: 20px 6px;
+  border-radius: 12px;
+  border-spacing: 20px 6px;
+  
+  color: #aaa;
+
+}
+
+caption {
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Tilt Warp', Arial, sans-serif;
+}
+table img {
+  max-width: 220px;
+  margin: 5px 12px;
+
+}
+tbody {
+  
+}
+thead {
+  color: #cb8838;
+  
+  font-size: 18px;
+  font-weight: bold;
+}
+
+td, th {
+  border-radius: 6px;
+}
+
+td {
+ background-color: #1125;
+  border: solid #38303050;
+
+}
+th {
+  border: dashed  3px #111;
+  background-color: #222;
+  
+}

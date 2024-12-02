@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <title>Contact Matthias</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Website Portfolio">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="Author" content="Matthias Barnes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Website Portfolio" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="Author" content="Matthias Barnes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Form.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Form.css" />
+
+    <link rel="icon" href="images/LogoCropped.svg" type="image/svg+xml">
 
   </head>
   <body>
@@ -21,9 +23,9 @@
 
         <ul>
           <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </header>
@@ -32,8 +34,7 @@
       <div>
         <h1>Contact Me</h1>
       </div>
-        
-      
+
       <form
         action="mailto:MJB415@hotmail.com?subject=Personal%20Portfolio%20Mail"
         enctype="text/plain"
@@ -43,28 +44,28 @@
           <legend>How do I contact you?</legend>
           <label for="company">Company:</label>
           <div>
-            <input type="text" name="company" id = "company">
+            <input type="text" name="company" id="company" />
           </div>
 
           <label for="PersonToContact">Person to contact:</label>
           <div>
-            <input type="text" name="PersonToContact" id="PersonToContact">
+            <input type="text" name="PersonToContact" id="PersonToContact" />
           </div>
 
+          <label for="email">Email:</label>
           <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="email" name="email" id="email" placeholder="Email" />
           </div>
 
+          <label for="phone">Phone Number:</label>
           <div>
-            <label for="phone">Phone Number:</label>
             <input
               type="tel"
               name="phone"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               id="phone"
               placeholder="000-000-0000"
-            >
+            />
           </div>
         </fieldset>
 
@@ -81,44 +82,54 @@
             <option value="On Call">On call</option>
           </select>
 
-          <p>How did you find me:</p>
-          <input
-            type="radio"
-            name="methodOfDiscovery"
-            id="LinkedIn"
-            value="LinkedIn"
-          >
-          <label for="LinkedIn">LinkedIn</label>
+          <!-- Radio Buttons -->
+          <h3>How did you find me:</h3>
+          <div class="radioButtonsContainer">
+            <span>
+              <input
+                type="radio"
+                name="methodOfDiscovery"
+                id="LinkedIn"
+                value="LinkedIn"
+              />
+              <label for="LinkedIn">LinkedIn</label>
+            </span>
 
-          <input
-            type="radio"
-            name="methodOfDiscovery"
-            id="Job-Fair"
-            value="Job Fair"
-          >
-          <label for="Job-Fair">Job Fair</label>
+            <span>
+              <input
+                type="radio"
+                name="methodOfDiscovery"
+                id="Job-Fair"
+                value="Job Fair"
+              />
+              <label for="Job-Fair">Job Fair</label>
+            </span>
 
-          <input
-            type="radio"
-            name="methodOfDiscovery"
-            id="CWI-Corporate-Partner"
-            value="CWI Corporate Partner"
-            checked
-          >
-          <label for="CWI-Corporate-Partner">CWI Corporate Partner</label>
+            <span>
+              <input
+                type="radio"
+                name="methodOfDiscovery"
+                id="CWI-Corporate-Partner"
+                value="CWI Corporate Partner"
+                checked
+              />
+              <label for="CWI-Corporate-Partner">CWI Corporate Partner</label>
+            </span>
 
-          <input
-            type="radio"
-            name="methodOfDiscovery"
-            id="Other"
-            value="Other"
-            checked
-          >
-          <label for="Other">Other</label>
+            <span>
+              <input
+                type="radio"
+                name="methodOfDiscovery"
+                id="Other"
+                value="Other"
+                checked
+              />
+              <label for="Other">Other</label>
+            </span>
+          </div>
 
-          <br >
-          <br >
-          <label for="comment">Additional Info/Comments:</label>
+          <!-- Comment input field -->
+          <h3>Additional Info/Comments:</h3>
           <div>
             <textarea
               name="comment"
@@ -128,7 +139,7 @@
           </div>
         </fieldset>
         <div>
-          <input type="submit" id="submit" value="Submit" class="btn">
+          <input type="submit" id="submit" value="Submit" class="btn" />
         </div>
       </form>
     </main>
@@ -136,10 +147,10 @@
     <footer>
       <a href="https://www.linkedin.com/in/matthias-barnes/" target="_blank">
         <img src="images/linkedin.svg" alt="LinkedIn"
-      ></a>
+      /></a>
       <a href="https://github.com/HalfMatt404/" target="_blank"
         ><img src="images/github.svg" alt="Git Hub"
-      ></a>
+      /></a>
     </footer>
   </body>
 </html>
