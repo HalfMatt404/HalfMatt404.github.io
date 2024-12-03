@@ -1,8 +1,9 @@
+/* Welcome image */
 main img {
   border-bottom: 3px #544 solid;
   
   width: 100vh;
-  max-width: 95%;
+  max-width: 500px;
   
   margin: 12px auto 50px;
   

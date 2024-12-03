@@ -22,6 +22,8 @@ legend {
   font-family: "Tilt Warp", Arial, sans-serif;
   font-weight: bold;
 }
+
+/* Styles most form input types */ 
 input,textarea, select {
   background-color: #373737;
   border: solid #222;
@@ -36,6 +38,7 @@ input,textarea, select {
   transition: all .2s ease;
 }
 
+/* When the user clicks on an input field */
 input:focus {
   font-size: 16px;
   
@@ -57,6 +60,7 @@ textarea {
   resize: none;
 }
 
+/* Form Backing */
 fieldset {
   background-color: #1125;
   border: solid #38303050;
@@ -65,6 +69,7 @@ fieldset {
   margin-bottom: 10px;
 }
 
+/* Submit button */
 input[type="submit"] {
   border-color: #333;
   background-color: #cb8838;
@@ -89,6 +94,7 @@ input[type="radio"] {
   margin-bottom: 0;
 }
 
+/*  Spaces the radio buttons horizontally */
 .radioButtonsContainer {
   display: flex;
   

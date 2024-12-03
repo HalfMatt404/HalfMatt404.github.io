@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
+/* Allows user to scroll on the table when the screen gets too small*/
 .scrollableTable {
   overflow-x:auto;
   overflow-y:hidden;
    
 }
+
 table {
   background: #20201c20;
+  color: #aaa;
+  border-radius: 12px;
+  
+  border-spacing: 20px 6px;
   margin: 0 auto 50px;
   padding: 20px 6px;
-  border-radius: 12px;
-  border-spacing: 20px 6px;
   
-  color: #aaa;
 
 }
 
 caption {
   color: #fff;
   font-size: 30px;
+  
   font-family: 'Tilt Warp', Arial, sans-serif;
 }
 table img {
@@ -26,9 +30,9 @@ table img {
   margin: 5px 12px;
 
 }
-tbody {
-  
-}
+
+/* No use was found for a tbody ruleset */
+
 thead {
   color: #cb8838;
   
@@ -48,5 +52,4 @@ td {
 th {
   border: dashed  3px #111;
   background-color: #222;
-  
 }

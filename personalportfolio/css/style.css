@@ -14,11 +14,10 @@
   src: url(../fonts/arimo/Arimo-Italic.ttf);
   font-style:italic;
 }
-/* Applies a standard font to all text */
-* {
-  font-family: arimo, Helvetica, sans-serif;
-}
 
+
+
+/* Sets background and sits website content right */
 body {
   background-color: #0d0d0e;
   background-image: url("../images/Background.png");
@@ -28,6 +27,8 @@ body {
   
   margin: 0;
 }
+
+/* For the navigation bar */
 header {
   background-color: #101015;
   background-image: linear-gradient(#101015, #19191f 20%, #101015 90%);
@@ -67,7 +68,6 @@ ul a:active {
   background-color: #eef2;
 }
 
-
 header li {
   float: left;
   
@@ -78,6 +78,14 @@ header li a {
   font-weight: bold;
   font-size: 1.2em;
 }
+
+header > a {
+  padding: 10px;
+  margin-left: 30px;
+  margin: auto;
+}
+
+/* links */
 a {
   color: #bcc;
   font-weight: bold;
@@ -96,19 +104,13 @@ a:not(p > a) {
   padding: 12px;
 }
 
-header > a {
-  padding: 10px;
-  margin-left: 30px;
-  margin: auto;
-}
-img {
-  filter: drop-shadow(3px 3px 3px #000a);
-}
 
+
+/* Format Main Content */
 main {
   background-color: #797070;
   background-image: linear-gradient(to right, #5c5050, #897875 1% 99%, #5c5050);
- 
+  
   display: flow-root;
   
   margin: 0px auto;
@@ -123,6 +125,8 @@ main div:has(p) {
   max-width: 500px;
   margin: auto
 }
+
+/* Footer */
 footer {
   background-color: #222;
   background-image: linear-gradient(#222, #222 50%, #1a1a1a);
@@ -133,26 +137,34 @@ footer {
   bottom: 0;
   
   justify-content: center;
-
+  
   width: 100%;
 }
 
+/* Text */
+
+  /* Applies a standard font to all text */
+* {
+  font-family: arimo, Helvetica, sans-serif;
+}
+
 p {
-    background-color: #1126;
-    color: #ccc;
-    
-    border-bottom: solid #38303050;
-    border-radius: 5px;
-    max-width: 500px;
-    
-    padding: 12px;
-    margin: 2px auto 20px;
-    
-    z-index: 0;
-    filter: drop-shadow(2px 2px 1px #1116);
-    
-    text-indent: 12px;
-  }
+  background-color: #1126;
+  color: #ccc;
+  
+  border-bottom: solid #38303050;
+  border-radius: 5px;
+  max-width: 500px;
+  
+  padding: 12px;
+  margin: 2px auto 20px;
+  
+  z-index: 0;
+  filter: drop-shadow(2px 2px 1px #1116);
+  
+  text-indent: 12px;
+}
+
 h1 {
   color: #fff;
   
@@ -170,7 +182,7 @@ h2 {
   font-size: 30px;
   font-family: 'Tilt Warp', Arial, sans-serif;
   margin: 0 auto; 
-
+  
   filter: drop-shadow(1px 1px 2px #211);
 }
 h3 {
@@ -180,10 +192,15 @@ h3 {
   margin-bottom: 5px;
 }
 
+/* Images */
+img {
+  filter: drop-shadow(3px 3px 3px #000a);
+}
+
+/* Changes to make site work for desktop */
 @media screen and (min-width: 600px) {
-  main img {
-    max-width: 500px;
-  }
+
+  
   main {
     border-radius: 0px 0px 12px 12px;
     width: 70%;
@@ -194,6 +211,8 @@ h3 {
     position: fixed;
     bottom: 0;
   }
+  
+  /* not(main a) to add specificity to override other footer a style */
   footer a:not(main a) {
     transform: scale(0.7);
     padding: 0;
