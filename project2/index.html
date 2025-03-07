@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- 
+    - 2/24/25 added a tags for navigation bar
+    
+    - 2/25/25 formatted navigation bar and added/linked CSS
+    - 2/25/25 created functionality for and linked to happyCustomer.js 
+
+    - 2/27/25 Laid out basic cheese selector images
+
+    - 3/5/25 added contact page content
+    - 3/5/25 basic javascript carousel
+    - 3/5/25 cart dropdown added
+
+    - 3/6/25 css for the contact/complaint form
+    - 3/6/25 logic for contact/complaint form
+
+-->
+<html lang="en">
+  <head>
+    <title>Gooda Cheese</title>
+
+    <!-- Meta data -->
+    <meta charset="UTF-8" >
+    <meta name="description" content="Free Web tutorials" >
+    <meta name="keywords" content="HTML, CSS, JavaScript" >
+    <meta name="Author" content="John Doe" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/contact.css" >
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header>
+      <nav>
+        <h3>Gooda Cheese</h3>
+        <ul>
+          <!-- navigation buttons -->
+          <li><a href="#home">Home</a></li>
+          <li><a href="#cheeses">CHEESES</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Shopping cart -->>
+        <ul class="dropdown">
+          <li>
+            <img src="images/cart.svg" alt="" >
+          </li>
+          <li>
+            <ul id="cart">
+              <li> 
+                <button id="buy">Buy</button>
+              </li>
+              <!-- Cart images will dynamically appear here with cheeseSelector.js -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home page content -->
+    <main>
+      <div class="segment" id="home">
+        <div class="wrapper">
+          <h1>Now Thats some<br>Gooda Cheese!</h1>
+          <br>
+          <h2 id="happyCustomers">Served ___ Happy Customers</h2>
+        </div>
+        <!-- Updates the amount of happy customers -->
+        <script src="javascript/happyCustomer.js"></script>
+      </div>
+
+      <!-- Cheese section -->
+      <div class="segment" id="cheeses">
+        <div class="wrapper"></div>
+
+        <h1>Cheese Wheel</h1>
+        <div class="carousel">
+          <img
+            class="carouselLeft"
+            src="images/square_rough.png"
+            alt="cheese1"
+          >
+          <img
+            class="carouselCenter"
+            src="images/square_rough.png"
+            alt="cheese2"
+          >
+          <img
+            class="carouselRight"
+            src="images/square_rough.png"
+            alt="cheese3"
+          >
+        </div>
+
+        <button id="addToCart">Add to cart</button>
+
+        <script src="javascript/cheeseSelector.js"></script>
+      </div>
+
+      <!-- Contact section -->
+      <div class="segment" id="contact">
+        <div class="wrapper">
+          <h1>Complain</h1>
+
+          <form
+            action="mailto:MJB415@hotmail.com?subject=Personal%20Portfolio%20Mail"
+            enctype="text/plain"
+            method="POST"
+            id="contactForm"
+          >
+            <fieldset>
+              <!-- Contact info -->
+              <legend>Who is Complaining?</legend>
+              <label for="company">Where do you work:</label>
+              <div>
+                <input type="text" name="company" id="company">
+              </div>
+
+              <label for="complainer">What is your name:</label>
+              <div>
+                <input
+                  type="text"
+                  name="complainer"
+                  id="complainer"
+                >
+              </div>
+
+              <label for="email">Email:</label>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                >
+              </div>
+
+              <label for="phone">Phone Number:</label>
+              <div>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="000-000-0000"
+                >
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <!-- Common issues dropdown -->
+              <legend>What Issues are you having?</legend>
+
+              <label for="customerIssue">Type of complaint:</label>
+              <select name="customerIssue" id="customerIssue">
+                <option value="growing Cheese">Cheese is growing rapidly</option>
+                <option value="eaten Friend">Cheese ate friend</option>
+                <option value="unstable Cheese">Unstable Cheese</option>
+                <option value="loud Cheese">Loud Cheese</option>
+                <option value="can't find Cheese">Can't find Cheese</option>
+                <option value="all the above">All the above</option>
+              </select>
+
+              <!-- Radio Buttons -->
+              <h3>How did you find out about Cheese:</h3>
+              <div class="radioButtonsContainer">
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="naturalMeans"
+                    value="natural Means"
+                  >
+                  <label for="naturalMeans">Just stumbled upon it</label>
+                </span>
+
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="advertisement"
+                    value="advertisement"
+                  >
+                  <label for="advertisement">THE ADVERTISEMENTS</label>
+                </span>
+
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="friendRecommended"
+                    value="friend Recommended"
+                  >
+                  <label for="friendRecommended">Friend recommended</label>
+                </span>
+
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="Other"
+                    value="Other"
+                    checked
+                  >
+                  <label for="Other">Other</label>
+                </span>
+              </div>
+
+              <!-- Need to keep the FBI away from our precious -->
+              <input type="checkbox" id="amFbi">
+              <label for="amFbi">Are you FBI?</label>
+
+              <!-- Comment input field -->
+              <h3>Additional Notes/Specific Complications:</h3>
+
+              <textarea
+                name="additionalNotes"
+                id="additionalNotes"
+                placeholder="My friends glow in the dark while not exposed to Cheese for 23 hours"
+              ></textarea>
+            </fieldset>
+            <ul id="formIssues"></ul>
+            <!-- Submit Button -->
+            <button id="submitComplaint">Submit</button>
+          </form>
+
+        </div>
+        <script src="javascript/formLogic.js"></script>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+  </body>
+</html>
