@@ -1,0 +1,84 @@
+form {
+  color: #ccc;
+  
+  
+  & button {
+    display:block;
+    
+    background-color: var(--cheeseColor);
+    color: var(--darkishPurble);
+    
+    font-weight: bold;
+    font-size: 20px;
+   
+    margin: 0 auto;
+    padding: 12px 32px;
+    
+    border-radius: 12px;
+    border: solid 3px var(--darkishPurble);
+    
+    transition: all 0.2s;
+    
+    &:hover{
+      padding: 20px 40px;
+    }
+  }
+}
+
+legend {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+label {
+  font-size: 18px;
+}
+
+fieldset {
+  margin: 12px;
+  
+  border: solid 2px var(--cheeseColor);
+  border-radius: 12px;
+  
+  box-shadow: 0 0 12px #000;
+}
+
+input, select, textarea {
+  accent-color: var(--cheeseColor);
+  color: var(--cheeseColor);
+  background-color: var(--darkPurble);
+
+  margin: 2px 0 10px 20px;
+  
+  outline: none;
+  border: solid 2px #9895;
+  border-radius: 2px;
+  
+  filter: drop-shadow(2px 2px 1px #0009);
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: 120px;
+  resize: none;
+  
+  margin: 15px auto;
+}
+
+.radioButtonsContainer {
+  display: flex;
+  justify-content:space-evenly;
+  
+  margin-bottom: 13px;
+}
+
+#formIssues {
+  color: #f66;
+  
+  list-style: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+

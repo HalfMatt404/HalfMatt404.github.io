@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!-- 
+    - 2/24/25 added a tags for navigation bar
+    
+    - 2/25/25 formatted navigation bar and added/linked CSS
+    - 2/25/25 created functionality for and linked to happyCustomer.js 
+
+    - 2/27/25 Laid out basic cheese selector images
+
+    - 3/5/25 added contact page content
+    - 3/5/25 basic javascript carousel
+    - 3/5/25 cart dropdown added
+
+    - 3/6/25 css for the contact/complaint form
+    - 3/6/25 logic for contact/complaint form
+
+    - 3/7/25 turned all javascript into typescript and made changes to accommodate
+    - 3/7/25 made tsconfig for compiling typescript
+    - 3/7/25 revamped cheese wheel selecting
+    - 3/7/25 added about us page
+
+-->
+<html lang="en">
+  <head>
+    <title>Gooda Cheese</title>
+
+    <!-- Meta data -->
+    <meta charset="UTF-8" >
+    <meta name="description" content="Free Web tutorials" >
+    <meta name="keywords" content="HTML, CSS, JavaScript" >
+    <meta name="Author" content="John Doe" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/contact.css" >
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header>
+      <nav>
+        <h3>Gooda Cheese</h3>
+        <ul>
+          <!-- navigation buttons -->
+          <li><a href="#home">Home</a></li>
+          <li><a href="#cheeses">CHEESES</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Shopping cart -->
+        <ul class="dropdown">
+          <li>
+            <img src="images/cart.svg" alt="" >
+          </li>
+          <li>
+            <ul id="cart">
+              <li> 
+                <button id="buy">Buy</button>
+              </li>
+              <!-- Cart images will dynamically appear here with cheeseSelector.js -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home page content -->
+    <main>
+      <div class="segment" id="home">
+        <div class="wrapper">
+          <h1>Now Thats some<br>Gooda Cheese!</h1>
+          <br>
+          <h2 id="happyCustomers">Served ___ Happy Customers</h2>
+        </div>
+        <!-- Updates the amount of happy customers -->
+        <script src="javascript/happyCustomer.js"></script>
+      </div>
+
+      <!-- Cheese section -->
+      <div class="segment" id="cheeses">
+        <div class="wrapper"></div>
+
+        <h1>Cheese Wheel</h1>
+        <div class="carousel">
+          <img
+            src="images/square_rough.png"
+            alt="cheese1"
+          >
+          <img
+            src="images/square_rough.png"
+            alt="cheese2"
+          >
+          <img
+            src="images/square_rough.png"
+            alt="cheese3"
+          >
+          <img
+            src="images/square_rough.png"
+            alt="cheese4"
+          >
+          <img
+            src="images/square_rough.png"
+            alt="cheese5"
+          >
+        </div>
+        
+        <button id="addToCart">Add to cart</button>
+        
+        <script src="javascript/cheeseSelector.js"></script>
+      </div>
+      
+      <!-- About Page-->
+      <div class="segment" id="about">
+        <h1>About Us</h1>
+        <div class="wrapper">
+          <h2>Founding:</h2>
+          <p>
+            <b>Gooda Cheese</b> was founded in 1860, by Nathan Hatcher in Bismark, North Dakota.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla sapien ac nunc interdum mattis. Donec at arcu consequat, pretium orci ut, tincidunt sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent luctus metus risus, vitae posuere enim dictum id. Nam pellentesque, dolor at aliquam facilisis, felis risus volutpat nisi, eget ornare ante est a nibh.
+
+            <br> Duis rhoncus purus quis nunc rhoncus, ut condimentum libero bibendum. Curabitur vel nisl condimentum, laoreet libero rutrum, interdum leo. Nam ut nulla pellentesque, venenatis nisl vitae, pellentesque tortor. Aliquam neque tellus, facilisis et est vel, vehicula feugiat dolor.
+            <br>
+            Etiam sit amet lorem quis diam interdum convallis mattis rutrum purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean et eros eu dui blandit rutrum. Mauris consectetur, sem sed suscipit venenatis, ligula eros blandit nisl, non cursus erat mi a lorem. Duis faucibus viverra turpis laoreet sodales. Curabitur orci leo, eleifend non rhoncus sed, rhoncus nec lectus. Ut convallis vitae diam nec dignissim.
+          </p>
+            
+            <h2>Founder</h2>
+            <p>
+              <b>Etiam</b> a sem nec orci laoreet rhoncus. Donec venenatis consectetur efficitur. Vivamus elit odio, convallis ac laoreet nec, faucibus nec urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque erat neque, placerat sit amet venenatis vel, lobortis condimentum mi. Curabitur laoreet, velit quis gravida dignissim, ante neque malesuada lorem, ut accumsan augue augue quis elit. Fusce diam dolor, egestas eget hendrerit vitae, vehicula et quam. Morbi feugiat nisl vitae facilisis tincidunt. Nam aliquet eu turpis nec maximus.
+            </p>
+              
+              
+            <h2>Different Owners:</h2>
+            <p>
+
+              <b>Gooda Cheese</b> Is proud to say ownership has never changed hands. Aenean vehicula feugiat est scelerisque cursus. Aliquam nec fringilla ligula, et blandit massa. In hac habitasse platea dictumst. Quisque maximus, nunc interdum luctus viverra, enim quam accumsan sem, at rhoncus tortor ligula nec elit. Donec odio enim, vestibulum dapibus massa in, aliquam commodo nibh. Etiam gravida vestibulum odio, sed rhoncus velit consectetur ut. Phasellus convallis, augue congue facilisis sagittis, metus massa efficitur elit, ut blandit erat turpis hendrerit magna. Vivamus nec lacus rutrum, tincidunt sapien vitae, venenatis lacus. 
+              <br> Nunc ac dui scelerisque, laoreet turpis quis, dapibus felis. Cras sit amet risus nisl. Proin lacinia non mi sit amet dictum. Suspendisse potenti. Donec mollis maximus dictum.
+            </p>
+              <h2>Workplace Safety</h2>
+              <p>
+                <b>In faucibus</b> est erat, vel dignissim dolor luctus ut. Nulla consequat arcu a convallis feugiat. In nunc magna, ullamcorper non ligula at, efficitur facilisis dui. Morbi et ante purus. Duis a fermentum orci. Curabitur fringilla elit lorem, quis varius diam eleifend ut. Integer maximus interdum nibh. Vivamus hendrerit lectus nec tincidunt faucibus. Duis accumsan volutpat diam, quis vehicula ante fermentum non. Maecenas viverra augue sit amet mauris consectetur, nec fermentum sem faucibus. Mauris efficitur luctus risus et ultricies. Nullam ut mi pretium, luctus dolor at, auctor dui. Sed bibendum at purus non ullamcorper. Curabitur non augue tempor, vestibulum lorem dapibus, bibendum justo. Curabitur quis laoreet tellus, eget cursus orci. Vestibulum non risus magna.
+              </p>
+                
+              <h2>Shadey allegations</h2>
+              <p>
+
+                <b>All false,</b> I don't know why people keep saying that Gooda Cheese is a "suspicious" company. Aliquam erat volutpat. Donec libero ligula, tempus nec libero nec, volutpat egestas tellus. Pellentesque laoreet arcu sit amet neque mollis iaculis. Quisque consequat, augue a maximus sollicitudin, ligula eros ornare felis, sed semper sapien est nec est. In in augue posuere libero ultrices cursus finibus a ante. Aenean sed arcu dignissim odio varius imperdiet. Nunc sit amet gravida nulla. Vivamus dictum venenatis auctor. Donec elit ex, pretium non elementum nec, commodo ac diam. 
+              </p>
+            </div>
+      </div>
+
+      <!-- Contact section -->
+      <div class="segment" id="contact">
+        <div class="wrapper">
+          <h1>Complain</h1>
+
+          <form
+            action="mailto:MJB415@hotmail.com?subject=Personal%20Portfolio%20Mail"
+            enctype="text/plain"
+            method="POST"
+            id="contactForm"
+          >
+            <fieldset>
+              <!-- Contact info -->
+              <legend>Who is Complaining?</legend>
+              <label for="company">Where do you work:</label>
+              <div>
+                <input type="text" name="company" id="company">
+              </div>
+
+              <label for="complainer">What is your name:</label>
+              <div>
+                <input
+                  type="text"
+                  name="complainer"
+                  id="complainer"
+                >
+              </div>
+
+              <label for="email">Email:</label>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                >
+              </div>
+
+              <label for="phone">Phone Number:</label>
+              <div>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="000-000-0000"
+                >
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <!-- Common issues dropdown -->
+              <legend>What Issues are you having?</legend>
+
+              <label for="customerIssue">Type of complaint:</label>
+              <select name="customerIssue" id="customerIssue">
+                <option value="growing Cheese">Cheese is growing rapidly</option>
+                <option value="eaten Friend">Cheese ate friend</option>
+                <option value="unstable Cheese">Unstable Cheese</option>
+                <option value="loud Cheese">Loud Cheese</option>
+                <option value="can't find Cheese">Can't find Cheese</option>
+                <option value="all the above">All the above</option>
+              </select>
+
+              <!-- Radio Buttons -->
+              <h3>How did you find out about Cheese:</h3>
+              <div class="radioButtonsContainer">
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="naturalMeans"
+                    value="natural Means"
+                  >
+                  <label for="naturalMeans">Just stumbled upon it</label>
+                </span>
+
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="advertisement"
+                    value="advertisement"
+                  >
+                  <label for="advertisement">THE ADVERTISEMENTS</label>
+                </span>
+
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="friendRecommended"
+                    value="friend Recommended"
+                    checked
+                  >
+                  <label for="friendRecommended">Friend recommended</label>
+                </span>
+
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="Other"
+                    value="Other"
+                  >
+                  <label for="Other">Other</label>
+                </span>
+              </div>
+
+              <!-- Need to keep the FBI away from our precious -->
+              <input type="checkbox" id="amFbi">
+              <label for="amFbi">Are you FBI?</label>
+
+              <!-- Comment input field -->
+              <h3>Additional Notes/Specific Complications:</h3>
+
+              <textarea
+                name="additionalNotes"
+                id="additionalNotes"
+                placeholder="My friends glow in the dark while not exposed to Cheese for 23 hours"
+              ></textarea>
+            </fieldset>
+            <ul id="formIssues"></ul>
+            <!-- Submit Button -->
+            <button id="submitComplaint">Submit</button>
+          </form>
+
+        </div>
+        <script src="javascript/formLogic.js"></script>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+  </body>
+</html>
