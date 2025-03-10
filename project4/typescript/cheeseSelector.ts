@@ -43,7 +43,7 @@ let updateImages = () => {
   for (let i = 0; i < carouselImages.length; i++) {
     if (getPositionIndex(i) == center - 1) {
 
-      let cheeseName = carouselImages[i].src.match(/\w+(?=\.)/).toString();
+      let cheeseName = carouselImages[i].src.match(/\w+(?=\.png)/).toString();
       cheeseName = cheeseName.replace(/([A-Z])/g, ' $1');
       cheeseName = cheeseName[0].toUpperCase() + cheeseName.substring(1, Infinity);
 
