@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+  "target": "ES6",
+  "module": "commonjs",
+  "removeComments": true,
+  "preserveConstEnums": true,
+  "alwaysStrict": true,
+  "outDir": "javascript/"
+  },
+
+  "include": ["typescript/"]
+}

@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&family=Patua+One&display=swap');
+
+:root {
+  --cheeseColor:#bb8242;
+  --darkishPurble :#292025;
+  --darkPurble :#201a20;
+  --whiteish:  #F4F3EE;
+}
+
+/* universal font families*/
+h1, h4, h5, a {
+  font-family: "Langar", system-ui, fantasy;
+  font-weight: 400;
+}
+
+* {
+  font-family: "Patua One", serif, Times;
+}
+
+/* Navigation */
+header {
+  background-color: var(--cheeseColor);
+  
+  position: sticky;
+  display: flex;
+  
+  top: 0;
+  width: 100%;
+  
+  z-index: 5;
+  
+  border-bottom: solid 5px #4227;
+  
+  box-shadow: 0px 3px 5px #000;
+  
+  & img {
+    display: block;
+    max-width: 75px;
+    
+    margin: 10px auto;
+    
+    filter: drop-shadow(2px 2px 1px #1005);
+  } 
+}
+
+/* Cart dropdown */
+.dropdown {
+  position: absolute;
+  top: -15px;
+  right: 40px;
+  
+  & li ul {
+    overflow: auto;
+    display: none;
+    
+    width: 93px;
+    max-height: 500px;
+    
+    background-color: #151015;
+    
+    padding: 4px;
+    
+    box-shadow: 0 0 15px #000c;
+    
+  }
+  
+  &:hover li ul {
+    display: block;
+  }
+  
+  & li {
+    display: block;
+  }
+  
+  & button {
+    width: 100%;
+  }
+}
+
+
+nav {
+  margin: 25px;
+  
+  
+  & h3 {
+    display: inline;
+    
+    color: var(--darkishPurble);
+  
+    font-size: 27px;
+    font-weight: bolder;
+  
+    filter: drop-shadow(1px 1px 1px #000a);
+  }
+  
+  /* Navigation links */
+  & ul {
+    display: inline;
+  }
+
+  & li {
+    display: inline-block;
+    margin: 2px 5px;
+  }
+  
+  & a {
+    color: var(--whiteish);
+  
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    
+    margin: 12px;
+    padding: 5px;
+    
+    border-bottom: solid 2px;
+ 
+    transition: all .35s;
+  }
+
+  & a:hover {
+    color: var(--darkishPurble);
+    border-bottom: solid 7px;
+  }
+}
+
+/* Main */
+.segment {
+  display: flex;
+  flex-direction: column;
+  
+  min-height: 900px;
+  
+  background-color: var(--darkPurble);
+  
+  padding: 20px;
+  
+  
+  box-shadow: 0px 0px 20px #000a;
+  
+  &:nth-of-type(odd) {
+  
+    background-color: var(--darkishPurble);
+  }
+}
+
+#home {
+  background-image: url("../images/homeCheese.jpg");
+  background-size:cover;
+  background-position: center;
+}
+
+
+#home h1 {
+  font-size: 120px;
+}
+
+#home h2 {
+  align-self: center;
+  
+  color: var(--cheeseColor);
+  text-decoration: underline;
+  
+  background: none;
+
+  filter: drop-shadow(0 5px 6px #000);
+}
+
+
+
+/* Carousel Styling */
+.carousel {
+  
+  /* testCode */
+  height: 450px;
+  overflow:hidden;
+  
+  display:flex;
+  justify-content:center;
+  
+  position:relative;
+  width: 100%;
+  background-image: linear-gradient(to right, #0000 5%, #111 20% 80%, #0000 95%);
+  margin: 20px;
+  
+  mask-image: linear-gradient(to right, #0000 10%, #000 35% 65%, #0000 90%);
+  
+  /* child images of .carousel */
+  & img {
+    /* Test Code */
+    position: absolute;
+    
+    width: 400px;
+    scale: .8;
+    
+    opacity: .6;
+    margin: 20px 0;
+  
+    filter: drop-shadow(5px 5px 2px #0004);
+    
+    transition:all .5s;
+    
+    &.active {
+      z-index: 1;
+      scale: .95;
+      opacity: 1;
+      
+      border-radius: 12px;
+      border: solid 5px var(--cheeseColor);
+    }
+    
+    &:hover {
+      scale: .9; 
+    }
+  }
+} 
+
+#cheeseLabel {
+  width: 90%;
+  padding: 12px;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #111;
+  mask-image: linear-gradient(to right, #0000 10%, #000 35% 65%, #0000 90%);
+  
+}
+
+#addToCart {
+  max-width: 200px;
+  margin: 0 auto;
+   
+}
+
+
+/* General Styling */
+html {
+  overscroll-behavior: none;
+  overflow: auto;
+}
+body {
+  margin: 0px;
+  
+}
+
+.wrapper {
+  display: flex;
+  flex-direction:column;
+  
+  max-width: 60%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+button { 
+  cursor:cell;
+  
+  color: var(--darkPurble);
+  background-color: var(--cheeseColor);
+  
+  font-weight: bold;
+  font-size: 20px;
+  
+  padding: 12px;
+  
+  border-radius: 5px;
+  border: none;
+  
+  box-shadow: 0 0 12px #000;
+
+  
+  transition: all 0.2s;
+  
+  &:hover {
+    background-color: #af6d3b;
+
+    
+    padding: 1.2em 1.2em;
+  }
+
+}
+
+br {
+  margin-bottom: 12px;
+}
+
+/* Text styling*/
+h1 {
+  justify-self: center;
+  
+  color: var(--whiteish);
+  
+  font-size: 80px;
+  
+  margin: 2px auto;
+  
+  filter: drop-shadow(4px 8px 3px #000);
+  
+}
+
+p {
+  color: var(--whiteish);
+  background-color: var(--darkPurble);
+  
+  font-size: 18px;
+
+  margin-top: 5px;
+  padding: 20px;
+
+  border-radius: 4px;
+  
+  box-shadow: 0 0 12px #000;
+  
+}
+
+b {
+  font-size: 20px;
+  margin: 4px;
+}
+
+h2 {
+  color: var(--whiteish);
+  
+  font-size: 30px;
+  
+  margin-bottom: 5px;
+
+  filter: drop-shadow(4px 4px 2px #000);
+}
+
+
+/* Review Styling */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+c-review {
+  white-space: normal;
+  & h4 {
+    color: var(--whiteish);
+    
+    font-size: 24px;
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 2px 2px #000);
+  }
+  & h5 {
+    
+    color: var(--whiteish);
+    
+    text-align: center;
+    font-size: 16px;
+    
+    margin: 4px auto;
+  
+    filter: drop-shadow(2px 2px 2px #000);
+  }
+  & div {    
+    width: 240px;
+    
+    background-image: linear-gradient(var(--cheeseColor) 90%, var(--darkPurble));
+    background-color: var(--cheeseColor);
+    margin: 12px;
+    box-shadow: 12px 12px 2px #000;
+    padding: 12px;
+    
+    border: 0px solid;
+    border-radius: 6px;
+    
+    transition: all .2s;
+  
+    &:hover {  
+      border: solid 10px var(--darkishPurble);
+
+    }
+  }
+}
+
+.slider {
+  overflow: clip;
+  mask-image: linear-gradient(to right, #0000 0%, #000 20% 80%, #0000);
+  background-image: linear-gradient(to right, #0000 5%, #000a 35% 65%, #0000 95%);
+  margin-bottom: 50px;
+  
+  border-bottom: 2px solid var(--cheeseColor);
+  white-space: nowrap;
+  
+  &:hover .slidingContainer {
+    animation-play-state: paused;
+  }
+}
+
+.slidingContainer {
+  display: inline-flex;
+  
+  margin: 12px 0;
+  animation: slide 12s linear infinite;
+}
+
+
