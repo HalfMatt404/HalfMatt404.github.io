@@ -1,65 +1,293 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
-    <title>Matthias' Home Page</title>
-
     <meta charset="UTF-8">
-    <meta name="description" content="Landing page of Matthias' Portfolio">
-    <meta name="keywords" content="Home Page, Portfolio, Hire him :P ">
-    <meta name="Author" content="Matthias Barnes">
+    <!-- Meta data -->
+    <meta name="description" content="Fanciest Cheeses in North Dakota">
+    <meta name="keywords" content="Fancy cheese, gouda Cheese, try some Cheese">
+    <meta name="Author" content="Nathan Hatcher">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- CSS links -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/homepage.css">
+    <title>Gooda Cheese</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/contact.css" >
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/LogoCropped.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- Navigation bar -->
     <header>
-      <div>
-        <a href="index.html">
-          <img src="images/LogoCropped.svg" alt="home image">
-        </a>
-
+      <nav>
+        <h3>Gooda Cheese</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <!-- navigation buttons -->
+          <li><a href="#home">Home</a></li>
+          <li><a href="#cheeses">CHEESES</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+
+        <!-- Shopping cart -->
+        <ul class="dropdown">
+          <li>
+            <img src="images/cart.svg" alt="" >
+          </li>
+          <li>
+            <ul id="cart">
+              <li> 
+                <button id="buy">Buy</button>
+              </li>
+              <!-- Cart images will dynamically appear here with cheeseSelector.js -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Main content -->
+    <!-- Home page content -->
     <main>
-      <div>
-        <img
-          src="images/splash.svg"
-          alt="Hey, My name is Matthias Barnes Welcome to my site"
-      >
+      <div class="segment" id="home">
+        <div class="wrapper">
+          <h1>Now Thats some<br>Gooda Cheese!</h1>
+          <br>
+          <h2 id="happyCustomers">Served ___ Happy Customers</h2>
+        </div>
+        <!-- Updates the amount of happy customers -->
+        <script src="javascript/happyCustomer.js"></script>
       </div>
 
-      <p>
-        You can get ahold of me at
-        <a href="mailto:MJB415@hotmail.com">MJB415@hotmail.com</a> <br>
-        or call me <a href="tel:12089196528">208-919-6528</a>
+      <!-- Cheese section -->
+      <div class="segment" id="cheeses">
+        
+        <h1>Cheese Wheel</h1>
+        <div class="carousel">
+          <img
+          src="images/square_rough.png"
+          alt="cheese1"
+          >
+          <img
+          src="images/square_rough.png"
+          alt="cheese2"
+          >
+          <img
+          src="images/square_rough.png"
+          alt="cheese3"
+          >
+          <img
+          src="images/square_rough.png"
+          alt="cheese4"
+          >
+          <img
+          src="images/square_rough.png"
+          alt="cheese5"
+          >
+        </div>
 
-        <br>You can also use the <a href="contact.html">Contact</a> page
-      </p>
+        <h2 id="cheeseLabel">Cheese</h2>
+        
+        
+        <button id="addToCart">Add to cart</button>
+        
+        <script src="javascript/cheeseSelector.js"></script>
+      </div>
+      
+      <!-- About Page-->
+      <div class="segment" id="about">
+        <h1>About Us</h1>
+        <div class="wrapper">
+          <h2>Founding:</h2>
+          <p>
+            <b>Gooda Cheese</b> was founded in 1872, by Nathan Hatcher in Edwinton, Dakota.
+            
+            The goal was to make the fanciest, curdled dairy product in the world.
+            <br>
+            From humble but ambitious beginnings as a small local Cheese dealer, Gooda Cheese has always tried to find ways to innovate. With only pennies to my name I had to improvise ingredients many would consider essential for making Cheese the "Proper" way. Through these circumstances I, Nathan, created new recipes unmatched by any other Cheese "manufacturer" at the time.  
+            <br>
+            Business was slow at the start I remember it well, the stares, the estranged glances my way. Even my family thought it a foolish endeavour. But I persisted through it all, slowly, painfully, gaining a small loyal clientele.
+            
+          </p>
+            
+            <h2>Founder:</h2>
+            <p>
+              <b>I,</b> Nathan was 26 years old at the time Gooda Cheese was formed. I nor my family were ever wealthy, often having forced into eating the creative meals of cobbled together leftovers. My family consisted of my mother, my father, my two younger siblings, and myself. I was always the one to help mother in the kitchen.
+            </p>
+              
+              
+            <h2>Different Owners:</h2>
+            <p>
+
+              <b>Gooda Cheese</b> is proud to say ownership has never changed hands. It would be daft to consider any other being able to lead Gooda the way I do.
+            </p>
+              <h2>Workplace Safety:</h2>
+              <p>
+                <b>Gooda Cheese</b> takes employee safety very seriously, and have repeatedly responded to employees falling in vats within 20 minutes of the incident. All employees are required to wear plastic hoof coverings and construction grade hard hats. And are trained in proper procedure in case of emergency scenarios.
+              </p>
+                
+              <h2>Shadey allegations:</h2>
+              <p>
+
+                <b>All false,</b> I don't know why people keep saying that Gooda Cheese is a "suspicious" company.
+              </p>
+            </div>
+      </div>
+
+      <script src="javascript/customElements.js"></script>
+      <div class="segment" id="reviews">
+        <div class="wrapper">
+          <h1>Reviews</h1>
+
+          <h2>What Customers are saying:</h2>
+
+          <div class="slider" id="humanReviews">
+            <!-- reviewGenerator.ts will fill this in -->
+          </div>
+
+          <h2>What Employees are saying:</h2>
+          <div class="slider" id="cowReviews">
+            <!-- reviewGenerator.ts will fill this in -->            
+          </div>
+        </div>
+
+        <script src="javascript/reviewGenerator.js"></script>
+      </div>
+
+      <!-- Contact section -->
+      <div class="segment" id="contact">
+        <div class="wrapper">
+          <h1>Complain</h1>
+
+          <form
+            action="mailto:MJB415@hotmail.com?subject=Personal%20Portfolio%20Mail"
+            enctype="text/plain"
+            method="POST"
+            id="contactForm"
+          >
+            <fieldset>
+              <!-- Contact info -->
+              <legend>Who is Complaining?</legend>
+              <label for="company">Where do you work:</label>
+              <div>
+                <input type="text" name="company" id="company">
+              </div>
+
+              <label for="complainer">What is your name:</label>
+              <div>
+                <input
+                  type="text"
+                  name="complainer"
+                  id="complainer"
+                >
+              </div>
+
+              <label for="email">Email:</label>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                >
+              </div>
+
+              <label for="phone">Phone Number:</label>
+              <div>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="000-000-0000"
+                >
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <!-- Common issues dropdown -->
+              <legend>What Issues are you having?</legend>
+
+              <label for="customerIssue">Type of complaint:</label>
+              <select name="customerIssue" id="customerIssue">
+                <option value="growing Cheese">Cheese is growing rapidly</option>
+                <option value="eaten Friend">Cheese ate friend</option>
+                <option value="unstable Cheese">Unstable Cheese</option>
+                <option value="loud Cheese">Loud Cheese</option>
+                <option value="can't find Cheese">Can't find Cheese</option>
+                <option value="all the above">All the above</option>
+              </select>
+
+              <!-- Radio Buttons -->
+              <h3>How did you find out about Cheese:</h3>
+              <div class="radioButtonsContainer">
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="naturalMeans"
+                    value="natural Means"
+                  >
+                  <label for="naturalMeans">Just stumbled upon it</label>
+                </span>
+
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="advertisement"
+                    value="advertisement"
+                  >
+                  <label for="advertisement">THE ADVERTISEMENTS</label>
+                </span>
+
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="friendRecommended"
+                    value="friend Recommended"
+                    checked
+                  >
+                  <label for="friendRecommended">Friend recommended</label>
+                </span>
+
+                <span>
+                  <input
+                    type="radio"
+                    name="methodOfDiscovery"
+                    id="Other"
+                    value="Other"
+                  >
+                  <label for="Other">Other</label>
+                </span>
+              </div>
+
+              <!-- Need to keep the FBI away from our precious -->
+              <input type="checkbox" id="amFbi">
+              <label for="amFbi">Are you FBI?</label>
+
+              <!-- Comment input field -->
+              <h3>Additional Notes/Specific Complications:</h3>
+
+              <textarea
+                name="additionalNotes"
+                id="additionalNotes"
+                placeholder="My friends glow in the dark while not exposed to Cheese for 23 hours"
+              ></textarea>
+            </fieldset>
+            <ul id="formIssues"></ul>
+            <!-- Submit Button -->
+            <button id="submitComplaint">Submit</button>
+          </form>
+
+        </div>
+        <script src="javascript/formLogic.js"></script>
+      </div>
     </main>
 
-    <!-- Links to linkedin and github in the footer-->
-    <footer>
-      <a href="https://www.linkedin.com/in/matthias-barnes/" target="_blank">
-        <img src="images/linkedin.svg" alt="LinkedIn">
-      </a>
-      <a href="https://github.com/HalfMatt404/" target="_blank"
-        ><img src="images/github.svg" alt="Git Hub">
-      </a>
-    </footer>
+    <!-- Footer -->
+    <footer></footer>
   </body>
 </html>
