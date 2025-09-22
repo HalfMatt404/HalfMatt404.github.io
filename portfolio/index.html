@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Matthias' Home Page</title>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="Landing page of Matthias' Portfolio" />
+    <meta name="keywords" content="Home Page, Portfolio, Hire him :P " />
+    <meta name="Author" content="Matthias Barnes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="css/table.css" />
+    <link rel="stylesheet" href="css/Form.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/LogoCropped.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header>
+      <div>
+        <a href="#home">
+          <img src="images/LogoCropped.svg" alt="home image" />
+        </a>
+
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <div id="home">
+        <img
+          src="images/splash.svg"
+          alt="Hey, My name is Matthias Barnes Welcome to my site"
+        />
+      </div>
+
+      <div id="about">
+        <h1>About Me</h1>
+      </div>
+
+      <div>
+        <h2>Education</h2>
+      </div>
+      <p>
+        I am in the process of completing an <b>associate degree</b> in software
+        development at <b>CWI</b> and am expected to graduate after the
+        <i>spring 2026 semester</i>.
+      </p>
+
+      <div>
+        <h2>Clubs:</h2>
+      </div>
+      <p>
+        I was a part of a student-led organization named
+        <abbr title="Business Professionals of America"><i>BPA</i></abbr>
+        and made it to the national competition held in Chicago. In which I
+        improved my timeliness and communication skills.
+      </p>
+
+      <p>I was the secretary of our Skills USA group at CWI.</p>
+
+      <div id="experience">
+        <h1>Experience</h1>
+      </div>
+
+      <p>
+        I have been working with <i>C# language</i> since <strong>2020</strong>,
+        I picked it up as it was the recommended language to use with the
+        <i>Unity Game Engine</i>. For a year before that, I was using simplified
+        JavaScript on Khan Academy.
+      </p>
+
+      <div>
+        <h2>Projects I have worked on:</h2>
+      </div>
+      <div class="grid">
+        <div>
+          <h3>Wizards Duel</h3>
+          <a href="https://halfmatt404.itch.io/wizards-duel" target="_blank"
+            ><img
+              src="images/ProjectExample1.jpg"
+              alt="Wizards Duel Project, a game made in unity"
+          /></a>
+        </div>
+
+        <div>
+          <h3>Tower Defense Shooter</h3>
+          <a href="https://halfmatt404.itch.io/tower-defense" target="_blank"
+            ><img
+              src="images/ProjectExample2.jpg"
+              alt="Tower Defense Shooter, a game made in unity"
+          /></a>
+        </div>
+        <div>
+          <h3>Gooda Cheese</h3>
+          <a href="https://halfmatt404.github.io/goodacheese/" target="_blank"
+            ><img src="images/ProjectExample3.png" alt="Website"
+          /></a>
+        </div>
+        <div>
+          <h3>Bootstrap Cheese</h3>
+          <a
+            href="https://stackblitz.com/edit/vitejs-vite-ktfkqrc2?file=index.html"
+            target="_blank"
+            ><img
+              src="images/ProjectExample4.jpg"
+              alt="Gooda cheese website modified with bootstrap to make it more responsive to different screens sizes"
+          /></a>
+        </div>
+        <div>
+          <h3>React Project</h3>
+          <a
+            href="https://stackblitz.com/edit/vitejs-vite-dqlsgnig?file=index.html"
+            target="_blank"
+            ><img
+              src="images/ProjectExample5.jpg"
+              alt="Example of a website built with react"
+          /></a>
+        </div>
+      </div>
+
+      <div id="contact">
+        <h1>Contact Me</h1>
+      </div>
+
+      <form
+        action="mailto:MJB415@hotmail.com?subject=Personal%20Portfolio%20Mail"
+        enctype="text/plain"
+        method="POST"
+        id="contactForm"
+      >
+        <fieldset>
+          <!-- Contact info -->
+          <legend>How do I contact you?</legend>
+          <label for="company">Company:</label>
+          <div>
+            <input type="text" name="company" id="company" />
+          </div>
+
+          <label for="PersonToContact">Person to contact:</label>
+          <div>
+            <input type="text" name="PersonToContact" id="PersonToContact" />
+          </div>
+
+          <label for="email">Email:</label>
+          <div>
+            <input type="email" name="email" id="email" placeholder="Email" />
+          </div>
+
+          <label for="phone">Phone Number:</label>
+          <div>
+            <input
+              type="tel"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              id="phone"
+              placeholder="000-000-0000"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <!-- Opportunities Dropdown -->
+          <legend>What opportunities are available at your company?</legend>
+
+          <label for="position">Type of Position:</label>
+          <select name="position" id="position">
+            <option value="Internship">Internship</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Contract">Contract</option>
+            <option value="Temporary">Temporary</option>
+            <option value="On Call">On call</option>
+          </select>
+
+          <!-- Radio Buttons -->
+          <h3>How did you find me:</h3>
+          <div class="radioButtonsContainer">
+            <span>
+              <input
+                type="radio"
+                name="methodOfDiscovery"
+                id="LinkedIn"
+                value="LinkedIn"
+              />
+              <label for="LinkedIn">LinkedIn</label>
+            </span>
+
+            <span>
+              <input
+                type="radio"
+                name="methodOfDiscovery"
+                id="Job-Fair"
+                value="Job Fair"
+              />
+              <label for="Job-Fair">Job Fair</label>
+            </span>
+
+            <span>
+              <input
+                type="radio"
+                name="methodOfDiscovery"
+                id="CWI-Corporate-Partner"
+                value="CWI Corporate Partner"
+                checked
+              />
+              <label for="CWI-Corporate-Partner">CWI Corporate Partner</label>
+            </span>
+
+            <span>
+              <input
+                type="radio"
+                name="methodOfDiscovery"
+                id="Other"
+                value="Other"
+                checked
+              />
+              <label for="Other">Other</label>
+            </span>
+          </div>
+
+          <!-- Comment input field -->
+          <h3>Additional Info/Comments:</h3>
+          <div>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="How should I prepare for the interview?"
+            ></textarea>
+          </div>
+        </fieldset>
+        <ul id="formIssues"></ul>
+        <div>
+          <button
+            class="submitButton"
+            type="submit"
+            id="submitButton"
+            value="Submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </main>
+    <script src="JS/formValidation.js"></script>
+
+    <!-- Links to linkedin and github in the footer-->
+    <footer>
+      <a href="https://www.linkedin.com/in/matthias-barnes/" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/HalfMatt404/" target="_blank"
+        ><img src="images/github.svg" alt="Git Hub" />
+      </a>
+    </footer>
+  </body>
+</html>
