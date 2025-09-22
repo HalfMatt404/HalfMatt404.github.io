@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+/* Sets background and sits website content right */
+body {
+  background-color: #0d0d0e;
+  background-image: url('../images/Background.png');
+
+  display: unset;
+
+  margin: 0;
+}
+
+/* For the navigation bar */
+header {
+  background-color: #101015;
+  background-image: linear-gradient(#101015, #19191f 20%, #101015 90%);
+  border-bottom: solid #cb8838 4px;
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  margin: 0;
+
+  z-index: 1;
+  box-shadow: 0 0 16px #10050590;
+}
+header div {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+
+header ul {
+  list-style-type: none;
+
+  margin: auto 20px;
+}
+
+ul a:link {
+  background: none;
+
+  transition: all 0.1s ease-in-out;
+}
+ul a:hover {
+  background-color: #fff1;
+}
+ul a:active {
+  background-color: #eef2;
+}
+
+header li {
+  float: left;
+
+  border-left: solid 2px #fff1;
+}
+header li a {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+header > a {
+  padding: 10px;
+  margin-left: 30px;
+  margin: auto;
+}
+
+/* links */
+a {
+  color: #bcc;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #cb8838;
+}
+
+a:active {
+  color: #fbb828;
+}
+
+a:not(p > a) {
+  text-decoration: none;
+  padding: 12px;
+}
+
+/* Format Main Content */
+main {
+  background-color: #797070;
+  background-image: linear-gradient(to right, #5c5050, #897875 1% 99%, #5c5050);
+
+  display: flow-root;
+
+  margin: 0px auto;
+  margin-bottom: 80px;
+  padding: 10px;
+}
+main div {
+  display: flex;
+}
+main div:has(p) {
+  display: block;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  background-image: linear-gradient(#222, #222 50%, #1a1a1a);
+  box-shadow: 0 -5px 4px #111a;
+
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+}
+
+/* Text */
+
+/* Applies a standard font to all text */
+* {
+  font-family: arimo, Helvetica, sans-serif;
+}
+
+p {
+  background-color: #1126;
+  color: #ccc;
+
+  border-bottom: solid #38303050;
+  border-radius: 5px;
+  max-width: 500px;
+
+  padding: 12px;
+  margin: 2px auto 20px;
+
+  z-index: 0;
+  filter: drop-shadow(2px 2px 1px #1116);
+
+  text-indent: 12px;
+}
+
+h1 {
+  color: #fff;
+
+  font-family: 'Tilt Warp', Arial, sans-serif;
+  font-size: 55px;
+  font-weight: bold;
+
+  margin: 0 auto 20px;
+
+  filter: drop-shadow(0 3px 2px #211);
+}
+
+h2 {
+  color: #ddd;
+  font-size: 30px;
+  font-family: 'Tilt Warp', Arial, sans-serif;
+  margin: 0 auto;
+
+  filter: drop-shadow(1px 1px 2px #211);
+}
+h3 {
+  color: #fee;
+  font-weight: bold;
+
+  margin-bottom: 5px;
+}
+
+/* Images */
+img {
+  filter: drop-shadow(3px 3px 3px #000a);
+}
+
+/* Changes to make site work for desktop */
+@media screen and (min-width: 600px) {
+  main {
+    border-radius: 0px 0px 12px 12px;
+    width: 70%;
+    margin-bottom: 55px;
+  }
+
+  /* not(main a) to add specificity to override other footer a style */
+  footer a:not(main a) {
+    transform: scale(0.7);
+    padding: 0;
+  }
+}
