@@ -80,12 +80,12 @@ header {
     color: black;
     font-weight: bold;
     position: inherit;
+    border: none;
 
     transition: all 0.2s;
     outline: 0px solid #fff;
     &:hover {
         outline: 6px solid #fff;
-        transform: scale(12);
     }
 }
 .gallery {
