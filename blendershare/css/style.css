@@ -97,10 +97,12 @@ header {
     justify-content: center;
 }
 .galleryImg {
-    max-height: 200px;
+    height: 200px;
     margin: 6px;
     border-radius: 12px;
     transition: all 0.1s;
+
+    image-resolution: 0.1x;
 
     &:hover {
         cursor: pointer;
@@ -175,6 +177,7 @@ a.bg-accent:hover {
     text-decoration: unset;
     border-radius: 12px;
     transition: all 0.2s;
+
     &:hover {
         outline: 6px solid;
         transform: translate(0, 20px);
@@ -183,7 +186,9 @@ a.bg-accent:hover {
             transform: scale(1.1);
         }
     }
+
     & span {
+        margin-bottom: 6px;
         text-decoration: underline;
     }
 
