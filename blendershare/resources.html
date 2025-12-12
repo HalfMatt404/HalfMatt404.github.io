@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="A collection of channels that make Blender tutorials"
+        />
+        <title>Channels that share Blender Knowledge</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="examples.html">My Stuff</a></li>
+            </ul>
+        </header>
+        <main>
+            <h1>Channels that I have found useful</h1>
+            <div id="channels" class="channels"></div>
+        </main>
+    </body>
+
+    <script>
+        var names = [
+            "Ducky3D",
+            "Blender Guru",
+            "Polyfjord",
+            "Ryan King Art",
+            "Josh - Blender Bros",
+            "Joey Carlino",
+        ];
+        var imageUrls = [
+            "https://yt3.googleusercontent.com/FJ7as8ylKBl1ljf_rXqCp2BhdyMfoMXm91-B_on0QyrRcaImGFd0YWZQrGtHpRjux4mEbrRG=s160-c-k-c0x00ffffff-no-rj",
+            "https://yt3.googleusercontent.com/DSzMBU-1G4ZvdLS6YtnItbZliceGWE2uS8VIo2jYcxEDqPtSmYIFcDk6NXgjn99qXoab06XWnw=s160-c-k-c0x00ffffff-no-rj",
+            "https://yt3.googleusercontent.com/L6uT3TXiyJDveG2Ls6Qg6zeAnzVZPvG-4gbkHCyjCiqORq_ro4LLvAeWHAJeHkUu1ym3l-Zg=s160-c-k-c0x00ffffff-no-rj",
+            "https://yt3.googleusercontent.com/K3unDMf4w9YEgLU5Xu1eMvS_hmpAQ6Zblq9toM8-ew5SUyapRWFWUFhlRkSofYVAc2mvPEsy=s160-c-k-c0x00ffffff-no-rj",
+            "https://yt3.googleusercontent.com/8yw9bDZkIAfXEtJLrSLykjlRUq7wL-kUau16h2rG5zmnvD1bEXMp2gwJwu5Dl9VsgUEcO_hIlBc=s160-c-k-c0x00ffffff-no-rj",
+            "https://yt3.googleusercontent.com/ytc/AIdro_mII7jPZjsPy5pWBZqPFw7yDEdnTxPIu8ZAgZXuazxBrB_D=s160-c-k-c0x00ffffff-no-rj",
+        ];
+        var channelDescription = [
+            "Mostly tutorials about responsive effects, materials and grapics",
+            "Man responsible for the famous doughnut tutorials",
+            "Some tutorials, along with other interesting projects",
+            "Procedual materials and shaders",
+            "Hard surface modeling",
+            '"I create things (mostly Blender tutorials)"',
+        ];
+        var channelUrls = [
+            "https://www.youtube.com/@TheDucky3D",
+            "https://www.youtube.com/@blenderguru",
+            "https://www.youtube.com/@Polyfjord",
+            "https://www.youtube.com/@RyanKingArt",
+            "https://www.youtube.com/@JoshGambrell",
+            "https://www.youtube.com/@JoeyCarlino",
+        ];
+        var html = "";
+
+        function addChannelInfo(text, index, array) {
+            html += `
+                    <a class="card" href="${channelUrls[index]}" target="blank">
+                        <img src="${imageUrls[index]}" alt="${channelDescription[index]}" />
+                        <span class="text-accent">${text}</span>
+                        ${channelDescription[index]}
+                    </a>
+                `;
+        }
+        names.forEach(addChannelInfo);
+        document.getElementById("channels").innerHTML = html;
+    </script>
+</html>

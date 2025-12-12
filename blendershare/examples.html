@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Personal Gallery of artwork made with Blender</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <meta
+            name="description"
+            content="A gallery of the projects I have made using Blender"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="examples.html">My Stuff</a></li>
+            </ul>
+        </header>
+        <main>
+            <h1>What I have done with Blender</h1>
+            <div id="gallery" class="gallery"></div>
+            <div id="dialogBoxes" class="hide"></div>
+        </main>
+    </body>
+    <script>
+        var images = [
+            "Hamma.png",
+            "Doggo.png",
+            "Olrd.png",
+            "MushroomWithEnemy.png",
+            "Bern.png",
+            "Hotel.png",
+            "owl.png",
+            "MildSoftnessSpear.png",
+            "1.png",
+            "Bert.png",
+            "SnowMan.png",
+            "Lady.png",
+            "CastleTake2.png",
+            "BoneSpear.png",
+            "MonkeyComputer.png",
+            "Spinosaurus.png",
+            "EvilMonkey.png",
+            "Desk.png",
+            "untitled.png",
+            "Pizzaz.png",
+        ];
+        var altTexts = [
+            "A mountain side with a train track and robots hammering in nails",
+            "A sculpture of a corgi",
+            "the face of an old man",
+            "Mr Mushroom from Hollow Knight",
+            "A barn sitting in the middle of a valley",
+            "Hotel on the side of a street",
+            "Snow owl made of wood",
+            "Spear on display under a bright light",
+            "Santa is visiting you",
+            "A skeleton on a grid",
+            "Snowman with strange head",
+            "Lady with ye olde dress",
+            "Castle that could reach the sky",
+            "Spear made of bone and obsidian",
+            "Desktop computer with Suzanne powering it and doing computations",
+            "Spinosaurus",
+            "Metalic monkey with glowing eyes near a plastic shovel",
+            "Wooden desk",
+            "Ketchup being applied to a hamburger",
+            "pizza being lifted out of a box",
+        ];
+        var galleryHTML = "";
+        var dialogHTML = "";
+
+        var openDialog = false;
+
+        function showPopup(name) {
+            if (openDialog) {
+                changeImage(name);
+            } else {
+                openDialog = true;
+                flip(name);
+            }
+        }
+        function hidePopup(name) {
+            if (openDialog) {
+                openDialog = false;
+                flip(name);
+            }
+        }
+        function flip(name) {
+            changeImage(name);
+            var dialogBoxes = document.getElementById("dialogBoxes");
+            dialogBoxes.classList.toggle("hide");
+        }
+        function changeImage(newImage) {
+            dialogHTML = `<dialog open class="col">
+                <img class="displayImg" onclick="hidePopup('${newImage}')" src='images/${newImage}' alt='${
+                altTexts[images.indexOf(newImage)]
+            }' />
+                </dialog>`;
+
+            var dialogBoxes = document.getElementById("dialogBoxes");
+            dialogBoxes.innerHTML = dialogHTML;
+        }
+
+        function addImageHtml(imageText, index, array) {
+            galleryHTML += `<img class="galleryImg" onclick="showPopup('${imageText}')" src='images/${imageText}' alt='${altTexts[index]}'/>`;
+        }
+
+        images.forEach(addImageHtml);
+        document.getElementById("gallery").innerHTML = galleryHTML;
+    </script>
+</html>
