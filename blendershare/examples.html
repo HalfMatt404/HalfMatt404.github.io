@@ -94,8 +94,8 @@
             dialogBoxes.classList.toggle("hide");
         }
         function changeImage(newImage) {
-            dialogHTML = `<dialog open class="col">
-                <img class="displayImg" onclick="hidePopup('${newImage}')" src='images/${newImage}' alt='${
+            dialogHTML = `<dialog open class="col"> 
+                <img class="displayImg" tabindex="0" onfocus="hidePopup('${newImage}')" onclick="hidePopup('${newImage}')" src='images/${newImage}' alt='${
                 altTexts[images.indexOf(newImage)]
             }' />
                 </dialog>`;
@@ -105,7 +105,7 @@
         }
 
         function addImageHtml(imageText, index, array) {
-            galleryHTML += `<img class="galleryImg" onclick="showPopup('${imageText}')" src='images/tiny/smol${imageText}' alt='${altTexts[index]}'/>`;
+            galleryHTML += `<img class="galleryImg"  tabindex="0" onfocus="showPopup('${imageText}')" onmousedown="showPopup('${imageText}')" src='images/tiny/smol${imageText}' alt='${altTexts[index]}'/>`;
         }
 
         images.forEach(addImageHtml);
