@@ -12,9 +12,9 @@ import {
 import { movementVector } from "./keyboard-handling.js";
 
 const rImage = new Image();
-rImage.src = "../images/R.svg";
+rImage.src = "./images/R.svg";
 const wasdImage = new Image();
-wasdImage.src = "../images/WASD.svg";
+wasdImage.src = "./images/WASD.svg";
 
 // Draw
 export function drawPlayer(context) {
