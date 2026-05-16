@@ -103,6 +103,7 @@ export function initializeGame() {
     enemies = [];
 
     wave = 1;
+    waveTimer = 0;
     intermissionTimer = intermissionLength;
 
     enemyTimer = 0;
@@ -116,7 +117,7 @@ function stopTime() {
     clearInterval(gameLoop);
 }
 export function pause() {
-    drawPauseScreen(context);
+    // drawPauseScreen(context);
 
     paused = true;
     stopTime();
