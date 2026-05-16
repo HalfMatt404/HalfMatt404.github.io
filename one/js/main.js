@@ -117,7 +117,7 @@ function stopTime() {
     clearInterval(gameLoop);
 }
 export function pause() {
-    // drawPauseScreen(context);
+    drawPauseScreen(context);
 
     paused = true;
     stopTime();
