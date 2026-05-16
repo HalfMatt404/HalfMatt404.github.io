@@ -20,11 +20,6 @@ export const canvasDimesions = canvas.getBoundingClientRect();
 export const context = canvas.getContext("2d");
 const characterContext = characterCanvas.getContext("2d");
 
-const rImage = new Image();
-rImage.src = "../images/R.svg";
-const wasdImage = new Image();
-wasdImage.src = "../images/WASD.svg";
-
 const playerStartValues = {
     maxHealth: 100,
     health: 100,
