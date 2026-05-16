@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/alerts.css" />
+    </head>
+    <body>
+        <main>
+            <div class="input">
+                <h1 class="centerText">Weather Alerts</h1>
+                <form id="inputForm">
+                    <input
+                        placeholder="Enter State eg. FL"
+                        type="text"
+                        id="state"
+                    />
+                    <button type="submit">Search</button>
+                </form>
+                <span id="errors" class="errors"></span>
+            </div>
+
+            <div id="alerts" class="alerts"></div>
+        </main>
+
+        <script src="js/alerts.js"></script>
+    </body>
+</html>
