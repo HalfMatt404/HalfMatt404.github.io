@@ -4,7 +4,7 @@ import { canvasDimesions } from "./world-info.js";
 const spacing = 200;
 
 const headSprite = new Image();
-headSprite.src = "../magician-head.png";
+headSprite.src = "./magician-head.png";
 
 export function drawHurtCounters(context) {
     context.textAlign = "center";
